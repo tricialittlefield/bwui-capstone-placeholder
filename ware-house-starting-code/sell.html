@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- The default character encoding for HTML5 is UTF-8. -->
+	<meta charset="UTF-8" />
+  <title>Sell your products on WareHouse</title>
+  <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/base.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/sell.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+
+    <header role="banner">
+      <div class="image-container">
+        <a href="index.html"><img src="resources/img/home.png" alt="Warehouse Logo."></a>
+      </div>
+      <!-- search bar with Landmark and Aria Role -->
+      <form class="search-bar" role="search">
+        <input type="text" value="" name="search" id="search" placeholder="Search for furniture.">
+        <a href="#" class="icon" aria-label="Search for furniture."><img src="resources/img/search.svg" alt=""></a>
+      </form>
+      <a href="cart.html" class="button cart">Cart <img src="resources/img/cart.svg" alt=""></a>
+    </header>
+    
+    <!-- I used aria-label because I do not have a unique heading ID to connect with aria-labelledby -->
+    <nav role="navigation" aria-label="Main Navigation.">
+      <a href="products.html">Buy Furniture</a>
+      <a href="sell.html">Sell Furniture</a>
+       <a href="deals.html">Today's Deals</a>
+      <a href="about.html">About Us</a>
+      <a href="#">Help</a>
+    </nav>
+
+    <!-- Sell Product Form -->
+    
+    <!-- added class="visually-hidden" to labels to hide them from sighted users while making them accessible people with vision issue. Placeholder text cannot be counted on. -->
+
+    <div id="main" class="sell" role="main">
+      <h3>Sell your Products on Warehouse</h3>
+      
+      <!-- add some whitespace -->
+      <p style="margin-bottom: 20px;">Use this form to enter your product information and details.</p>
+      <form role="form">
+        <div id="name" class="field">
+          <label for="name">Product Name</label>
+          <input type="text" name="name">
+        </div>
+        <div id="price" class="field">
+          <label for="price">Enter your selling price.</label>
+          <input type="text" name="price">
+        </div>
+        <div id="quantity" class="field">
+          <label for="quantity">Select the quantity you are selling.</label>
+          <select id="quantity" name="quantity">
+	        
+            <option value="100">100</option>
+            <option value="100-200">100-200</option>
+            <option value="200-300">200-300</option>
+            <option value="300-400">300-400</option>
+            <option value="500">500</option>
+          </select>
+        </div>
+        <div id="description" class="field">
+          <label for="description">Enter your product description.</label>
+          <textarea name="description"></textarea>
+        </div>
+        <a href="#" class="button" id="submit">Submit</a>
+      </form>
+    </div>
+
+    <!-- Footer -->
+
+    <footer role="contentinfo">
+      <a href="/"><img src="resources/img/home.png" alt="Warehouse Logo."></a>
+      <!-- use aria-labelledby with unique ids associated with each heading -->
+      <div class="links" role="navigation" aria-labelledby="nav1">
+        <h4 id="nav1">Get to know us</h4>
+        <a href="#">About us</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="#">Investor relations</a>
+        <a href="#">Link</a>
+      </div>
+      <div class="links" role="navigation" aria-labelledby="nav2">
+        <h4 id="nav2">Make money with us</h4>
+        <a href="sell.html">Sell on WareHouse</a>
+        <a href="#">Become a vendor</a>
+        <a href="#">Fundraiser events</a>
+        <a href="#">Community outreach</a>
+      </div>
+      <div class="links" role="navigation"  aria-labelledby="nav3">
+        <h4 id="nav3">Help</h4>
+        <a href="#">Contact us</a>
+        <a href="#">Conditions of use</a>
+        <a href="#">Report a problem</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+    
+  </div>
+</body>
+</html>
